@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Word:</strong>
+  <%= @word.name %>
+</p>
+
+<%= link_to 'Редактировать', edit_word_path(@word) %> |
+<%= link_to 'Назад', words_path %>

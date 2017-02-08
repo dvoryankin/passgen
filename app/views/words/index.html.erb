@@ -1,0 +1,22 @@
+<%= form_for Word.new do |f| %>
+
+
+    <%= f.label :word %><br>
+    <%= f.text_field :name %>
+
+    <div class="actions">
+      <%= f.submit 'Add word' %>
+    </div>
+
+    <br>
+    <%= link_to "Generate", :controller => :words, :action => :generate %>
+    <br>
+    <%= link_to "Remove All", remove_all_words_path, :method => :remove_all %>
+<%= @result%>
+<% end %>
+
+
+
+
+
+
