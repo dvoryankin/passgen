@@ -5,10 +5,8 @@ Rails.application.routes.draw do
 
   resources :words do
     get :generate, on: :collection
-  end
-
-  resources :words do
     post :remove_all, on: :collection
+    post :remove_one, on: :collection
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

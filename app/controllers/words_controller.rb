@@ -30,9 +30,11 @@ class WordsController < ApplicationController
     arr = []
     @words.each do |w|
       arr << w.name
-
-      @result = arr.permutation(arr.size).to_a
-
+      if arr.size <= 3
+        puts "not enough words to generate"
+      else
+        @result = arr.permutation(arr.size).to_a
+      end
     end
   end
 
